@@ -13,7 +13,7 @@
     position: relative;
     overflow: hidden;
     padding: 8px;
-    background: linear-gradient(to bottom, #252323, black);
+    background: rgba(0, 0, 0, 0.8); /* Preto com 50% de transparência */
     justify-content: center;
     text-align: center;
     overflow-y: scroll;
@@ -25,7 +25,7 @@
 .titulo__conteudo{
     margin: 0; 
     padding: 5px;
-    color: aliceblue;
+    color: black;
     font-family: "Playfair Display", serif;
     font-weight: 900;
     font-size: 1rem;

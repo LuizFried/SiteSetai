@@ -15,4 +15,5 @@
 
 .video:hover{
     box-shadow: 0 0 10px 3px rgba(255, 255, 0, 0.8);
+    border-radius: 16px;
 }
