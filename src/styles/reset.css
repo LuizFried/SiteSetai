@@ -1,0 +1,143 @@
+/* 1. Normalização global */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  vertical-align: baseline;
+}
+
+/* 2. Definindo a fonte base */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 100%;
+  line-height: 1.5;
+  color: #333;
+  background-color: #fff;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 3. Asegurando um comportamento consistente para listas */
+ul, ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* 4. Removendo o estilo de links por padrão */
+a {
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+}
+
+/* 5. Estilo para tabelas */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+/* 6. Estilizando as imagens */
+img,
+picture,
+video,
+svg {
+  max-width: 100%;
+  display: block;
+  height: auto;
+  vertical-align: middle;
+}
+
+/* 7. Ajustes para o comportamento de form controls */
+input,
+button,
+textarea,
+select {
+  background-color: transparent;
+  border: none;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  outline: none;
+}
+
+/* 8. Scroll */
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+/* 9. Ajuste de tabelas e células */
+th {
+  text-align: left;
+  font-weight: bold;
+}
+
+/* 10. Remove bordas de formatação padrão de campos de formulário */
+input,
+select,
+textarea {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* 11. Estilo padrão para blocos de conteúdo */
+header, footer, section, article, aside, nav, figure, figcaption, main, details, summary {
+  display: block;
+}
+
+/* 12. Acentuação dos elementos de tipo */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: normal;
+  color: inherit;
+}
+
+/* 13. Ajustes para botões e links (similares aos controles de formulário) */
+button, a {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: inherit;
+  font: inherit;
+}
+
+/* 14. Ajuste de caixas de texto */
+textarea {
+  resize: vertical;
+}
+
+/* 15. Evitar problemas de espaçamento extra em formulários */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+/* 16. Scrollbar padrão */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

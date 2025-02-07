@@ -1,0 +1,20 @@
+.conteudo{
+    width: 100%; 
+    max-width: 60%; 
+    height: 100%; 
+    max-height: 88vh;
+    margin: 32px 16px 32px 16px;
+    border-radius: 16px;
+    border:2px solid transparent;
+    position: relative;
+    overflow: hidden;
+    padding: 8px;
+    background: linear-gradient(to bottom, #252323, black);
+    justify-content: center;
+    text-align: center;
+}
+
+.titulo__conteudo{
+    padding: 5px;
+    color: aliceblue;
+}
