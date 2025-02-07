@@ -12,9 +12,24 @@
     background: linear-gradient(to bottom, #252323, black);
     justify-content: center;
     text-align: center;
+ 
 }
 
-.titulo__conteudo{
+.paragrafo__conteudo {
+    display: flex;
+    align-items: center; 
+    gap: 0.5rem; 
+    color: aliceblue;
+    text-align: left; 
+}
+
+.titulo__conteudo {
+    margin: 0; 
     padding: 5px;
     color: aliceblue;
+}
+
+.paragrafo__conteudo i {
+    font-size: 1.2rem; 
+    vertical-align: middle; 
 }
