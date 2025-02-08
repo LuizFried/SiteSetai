@@ -1,14 +1,13 @@
-.conteudo__lateral{
-    width: 40%; 
-    max-width: 25%; 
-    height: 85%; 
+.conteudo__lateral {
+    width: 40%;
+    max-width: 25%;
+    height: 85%;
     max-height: 88vh;
     margin: 32px 16px 32px 16px;
-    border:0.1rem solid gold;
+    border: 0.1rem solid gold;
     border-radius: 16px;
     padding: 2rem;
     justify-content: flex-end;
-   
 }
 
 .video__yt {
@@ -20,7 +19,7 @@
     object-fit: cover;
 }
 
-.botao__recrutamento{
+.botao__recrutamento {
     width: 100%;
     height: 3rem;
     border-radius: 16px;
@@ -32,10 +31,10 @@
     margin-top: 1rem;
 }
 
-.botao__recrutamento{
+.botao__recrutamento {
     width: 100%;
     height: 100%;
     border-radius: 16px;
     margin-bottom: 2rem;
-    margin-top: 5rem;
+    margin
 }
