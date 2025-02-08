@@ -21,7 +21,7 @@ body {
     border:0.2rem solid gold;
     border-radius: 1rem;
     padding: 8px;
-    background-color: #121111;
+    background-color: rgba(0, 0, 0, 0.8);
     justify-content: center;
     display: flex;
     flex-direction: column;
