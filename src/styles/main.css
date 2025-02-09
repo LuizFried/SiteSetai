@@ -71,7 +71,7 @@ body {
     height: 100%;
     max-height: 88vh;
     margin: 32px 16px;
-    border-radius: 16px;
+    border-radius: 10px;
     border: 2px solid transparent;
     position: relative;
     overflow: hidden;
@@ -83,6 +83,28 @@ body {
     align-items: flex-start;
     box-sizing: border-box;
 }
+
+::-webkit-scrollbar {
+    width: 10px; 
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: white;
+    border-radius: 10px;
+}
+
+@keyframes brasilColors {
+    0% { color: green; }
+    33% { color: yellow; }
+    100% { color: green; }
+}
+
+.strong__setai {
+    font-weight: bold;
+    animation: brasilColors 2s infinite;
+}
+
 
 .titulo__conteudo {
     display: flex;
@@ -122,8 +144,6 @@ i {
     height: 85%;
     max-height: 88vh;
     margin: 32px 16px 32px 16px;
-    border: 0.1rem solid gold;
-    border-radius: 16px;
     padding: 2rem;
     justify-content: flex-end;
 }
