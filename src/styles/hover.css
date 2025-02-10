@@ -19,7 +19,7 @@
 }
 
 .botao__recrutamento:hover {
-    background-color: gold;
+    background-color: black;
     color: black;
     box-shadow: 0 0 10px 3px rgba(255, 255, 0, 0.8);
 }
