@@ -44,8 +44,15 @@
     border: 1px solid rgb(255, 0, 0);
 }
 
-.span__ancora__link {
-    color: goldenrod; 
+.span__ancora__link { 
     font-weight: 900;
     gap: 16px;
+}
+
+#twitchID{
+    color: #9146FF;
+}
+
+#youtubeID{
+    color: #FF0000;
 }

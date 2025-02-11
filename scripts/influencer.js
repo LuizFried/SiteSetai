@@ -7,8 +7,8 @@ document.getElementById("influencerID").addEventListener("click", function() {
             <img class="img__influencer" src="./src/assets/influencer/turmadobatz.png" alt="Foto do influencer">
             <h1 class="nome__influencer">BatzOvo</h1>
             <span class="span__ancora__link">
-                <a class="ancora__link" href="https://www.twitch.tv/turmadobatz" target="blank"><i class="fa-brands fa-twitch"></i></a>
-                <a class="ancora__link" href="https://www.youtube.com/@PanelaAlbina" target="blank"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://www.twitch.tv/turmadobatz" target="blank"><i id="twitchID" class="fa-brands fa-twitch"></i></a>
+                <a href="https://www.youtube.com/@PanelaAlbina" target="blank"><i id="youtubeID" class="fa-brands fa-youtube"></i></a>
             </span>
         </div>
 

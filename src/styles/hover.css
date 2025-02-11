@@ -24,3 +24,12 @@
     transform:scale(1.25);
     border-radius: 16px;
 }
+
+
+.ancora__twitch:hover{
+    color: rgb(174, 0, 255);
+}
+
+.ancora__youtube:hover{
+    color: rgb(255, 0, 0);
+}
