@@ -10,7 +10,7 @@ document.getElementById("staffID").addEventListener("click", function() {
         </div>
 
         <div class="staff">
-            <img class="img__staff" src="" alt="Foto do staff">
+            <img class="img__staff" src="./src/assets/staff/marialice.jpg" alt="Foto do staff">
             <h1 class="nome__staff">Marialice</h1>
             
         </div>
