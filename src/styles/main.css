@@ -97,10 +97,10 @@ body {
 @keyframes brasilColors {
     0% { color: green; }
     33% { color: yellow; }
-    100% { color: green; }
+    100% { color: rgb(103, 255, 103); }
 }
 
-.strong__setai {
+.strong__setai, .titulo__influencer, .titulo__staff {
     font-weight: bold;
     animation: brasilColors 2s infinite;
 }
