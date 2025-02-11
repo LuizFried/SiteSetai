@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="./src/styles/hover.css">
     <link rel="stylesheet" href="./src/styles/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="./src/styles/influencer.css">
+    <link rel="stylesheet" href="./src/styles/staff.css">
 </head>
 
 <body>
@@ -34,15 +35,20 @@
                 <a href="https://discord.gg/PyZT4wMQBX" target="_blank">DISCORD</a>
             </li>
 
-            <li class="twitch__inicial">
+            <li class="influencer__inicial">
                 <i class="fa-brands fa-twitch"></i>
-                <button>TWITCH</button>
+                <button id="influencerID">INFLUENCER</button>
+            </li>
+
+            <li class="staff__inicial">
+                <i class="fa-solid fa-user-tie"></i>
+                <button id="staffID">STAFF</button>
             </li>
            
         </ul>
     </div>
 
-    <div class="conteudo">
+    <div class="conteudo" id="conteudoID">
         <div class="titulo__conteudo">
             <i class="fa-solid fa-user-ninja"></i>
             <h1>Seja bem-vindo à <strong class="strong__setai">SETAI</strong></h1>       
@@ -119,5 +125,8 @@
 
     </div>
 
+    <script src="scripts/script.js" defer></script>
+    <script src="scripts/influencer.js" defer></script>
+    <script src="scripts/staff.js" defer></script>
 </body>
 </html>
