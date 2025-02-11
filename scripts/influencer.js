@@ -1,7 +1,7 @@
 document.getElementById("influencerID").addEventListener("click", function() {
     document.getElementById("conteudoID").innerHTML =`
     <a href="#" onclick="location.reload(); return false;"><i class="fa-solid fa-arrow-left"></i></a>
-    <h1 class="titulo__influencer">Influencers</h1>
+    <h1 class="titulo__influencer">INFLUENCER</h1>
     <div class="box__influencer">
         <div class="influencer">
             <img class="img__influencer" src="./src/assets/influencer/turmadobatz.png" alt="Foto do influencer">
