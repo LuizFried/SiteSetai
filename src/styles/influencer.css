@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;900&display=swap');
 
-
 .box__influencer {
     display: flex; 
     flex-wrap: wrap; 
@@ -21,7 +20,6 @@
     font-size: 2rem; 
     font-weight: bold; 
 }
-
 
 .influencer {
     width: calc(25% - 1rem); 
@@ -49,10 +47,38 @@
     gap: 16px;
 }
 
-#twitchID{
+#twitchID {
     color: #9146FF;
 }
 
-#youtubeID{
+#youtubeID {
     color: #FF0000;
+}
+
+/* Responsividade */
+
+@media screen and (max-width: 1024px) {
+    .influencer {
+        width: calc(50% - 1rem); 
+    }
+}
+
+/* Telas pequenas*/
+@media screen and (max-width: 768px) {
+    .influencer {
+        width: 100%; 
+    }
+
+    .titulo__influencer {
+        font-size: 1.5rem; 
+    }
+
+    .img__influencer {
+        width: 80px;
+        height: 80px;
+    }
+
+    .influencer {
+        font-size: 1rem;
+    }
 }
