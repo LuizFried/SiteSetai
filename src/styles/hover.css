@@ -34,7 +34,7 @@
     color: rgb(255, 0, 0);
 }
 
-#analitics:hover, #grind:hover {
+#analitics:hover, #grind:hover, #murder:hover {
     color: #388E3C;
     transform: scale(1.25);
 }
