@@ -85,7 +85,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-    width: 10px; 
+    width: 5px; 
     border-radius: 10px;
 }
 
@@ -100,7 +100,7 @@ body {
     100% { color: rgb(103, 255, 103); }
 }
 
-.strong__setai, .titulo__influencer, .titulo__staff {
+.strong__setai, .titulo__influencer, .titulo__staff, .titulo__uteis {
     font-weight: bold;
     animation: brasilColors 2s infinite;
 }

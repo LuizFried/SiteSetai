@@ -33,3 +33,8 @@
 .ancora__youtube:hover{
     color: rgb(255, 0, 0);
 }
+
+#analitics:hover, #grind:hover {
+    color: #388E3C;
+    transform: scale(1.25);
+}
