@@ -1,0 +1,24 @@
+.conteudo__builds{
+    width: 100%;
+    height: auto;
+    background: transparent;
+    
+    
+
+}
+
+.button__press__1{
+    background: #ff0000;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button__press__2{
+    background: #ff0000;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
