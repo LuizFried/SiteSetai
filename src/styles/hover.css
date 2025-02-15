@@ -2,7 +2,7 @@
     box-shadow: 0 0 10px 3px rgba(176, 176, 176, 0.8);
 }
 
-.lista__inicial li:hover {
+.lista__inicial li:hover, .button__builds:hover {
     color:gold;
     transform:scale(1.25);
     box-shadow: 0 0 10px 3px rgba(176, 176, 176, 0.8);
@@ -35,7 +35,7 @@
     color: rgb(255, 0, 0);
 }
 
-#analitics:hover, #grind:hover, #murder:hover {
+#analitics:hover, #grind:hover, #murder:hover, #warp:hover {
     color: #388E3C;
     transform: scale(1.25);
 }

@@ -25,7 +25,7 @@
     font-family: "Poppins", sans-serif;
 }
 
-.span_analitics, .span_grind, .span_murder {
+.span__analitics, .span__grind, .span__murder, .span__cloud {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -38,13 +38,13 @@
     font-style: normal;
 }
 
-#analitics, #grind, #murder {
+#analitics, #grind, #murder, #warp {
     font-size: 1rem;
     color: #4CAF50;
     transition: color 0.3s ease-in-out;
 }
 
-#analitics:hover, #grind:hover, #murder:hover {
+#analitics:hover, #grind:hover, #murder:hover, #warp {
     color: #388E3C;
 }
 

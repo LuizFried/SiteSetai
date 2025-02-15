@@ -2,7 +2,7 @@
 
 /* body */
 body {
-    background-image: url('../assets/imagensreservas/samurai3.jpg');
+    background-image: url('../assets/imagensreservas/samurai6.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -40,7 +40,7 @@ body {
     margin: 1rem auto;
 }
 
-.lista__inicial {
+.lista__inicial{
     
     max-width: 10rem;
     margin-top: 0.5rem;
@@ -99,7 +99,7 @@ body {
     100% { color: rgb(103, 255, 103); }
 }
 
-.strong__setai, .titulo__influencer, .titulo__staff, .titulo__uteis {
+.strong__setai, .titulo__influencer, .titulo__staff, .titulo__uteis, .titulo__builds {
     font-weight: bold;
     animation: brasilColors 2s infinite;
 }
