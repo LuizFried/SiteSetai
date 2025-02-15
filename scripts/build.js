@@ -5,8 +5,8 @@ document.getElementById("buildsID").addEventListener("click", function() {
         <span class="builds">
             <a class="button__builds" href="./src/assets/builds/SetaiPressAvalon.png" target="_blank">PRESS 1</a>
             <a class="button__builds" href="./src/assets/builds/SetaiPressAvalon2.png" target="_blank">PRESS 2</a>
-            <a class="button__builds" href="./src/assets/builds/SetaiPressAvalon.png" target="_blank">CLAP</a>
-            <a class="button__builds" href="./src/assets/builds/SetaiPressAvalon.png" target="_blank">CAIT</a>
+            <a class="button__builds" href="./src/assets/builds/cait1.jpg" target="_blank">CAIT 1</a>
+            <a class="button__builds" href="./src/assets/builds/cait2.jpg" target="_blank">CAIT 2</a>
             <a class="button__builds" href="./src/assets/buildpve/pve1.jpg" target="_blank">PVE 1</a>
             <a class="button__builds" href="./src/assets/buildpve/pve2.jpg" target="_blank">PVE 2</a>
             <a class="button__builds" href="./src/assets/buildpve/pve3.jpg" target="_blank">PVE 3</a>
