@@ -99,7 +99,7 @@ body {
     100% { color: rgb(103, 255, 103); }
 }
 
-.strong__setai, .titulo__influencer, .titulo__staff, .titulo__uteis, .titulo__builds {
+.strong__setai, .titulo__influencer, .titulo__staff, .titulo__uteis, .titulo__builds, .nomeDoMapa {
     font-weight: bold;
     animation: brasilColors 2s infinite;
 }
