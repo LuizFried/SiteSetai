@@ -12,7 +12,8 @@ document.getElementById("mapsID").addEventListener("click", function() {
 
     const listaMapas = [
         "ceritos-avulsum", "heritos-eyoztum", "xurites-ataglos", "xuros-eyoztum", "xuyitos-aioblos","xynitos-obursum",
-        "xynos-oyogam", "xouitos-aeoilos", "xoritos-osayam","",
+        "xynos-oyogam", "xouitos-aeoilos", "xoritos-osayam","hieos-aiigaum", "quantun-et-odetum", "sasitos-oyarlum",
+         "sasitos-ugersum", "", "",
         
     ];
 
