@@ -11,15 +11,13 @@ document.getElementById("mapsID").addEventListener("click", function() {
     `;
 
     const listaMapas = [
-        "ceritos-avulsum", "heritos-eyoztum", "xurites-ataglos", "xuros-eyoztum", "xuyitos-aioblos","xynitos-obursum",
-        "xynos-oyogam", "xouitos-aeoilos", "xoritos-osayam","hieos-aiigaum", "quantun-et-odetum", "sasitos-oyarlum",
-         "sasitos-ugersum", "", "",
-        
+        "ceritos-avulsum", "heritos-eyoztum", "xurites-ataglos", "xuros-eyoztum", "xuyitos-aioblos", "xynitos-obursum",
+        "xynos-oyogam", "xouitos-aeoilos", "xoritos-osayam", "hieos-aiigaum", "quantun-et-odetum", "sasitos-oyarlum",
+        "sasitos-ugersum"
     ];
 
     const inputMapa = document.getElementById("mapa");
     const sugestoesLista = document.getElementById("sugestoes");
-
 
     function debounce(func, delay) {
         let timeout;
@@ -28,7 +26,6 @@ document.getElementById("mapsID").addEventListener("click", function() {
             timeout = setTimeout(() => func.apply(this, args), delay);
         };
     }
-
 
     function mostrarSugestoes() {
         let termo = inputMapa.value.toLowerCase().trim();
@@ -45,15 +42,21 @@ document.getElementById("mapsID").addEventListener("click", function() {
                 item.addEventListener("click", function() {
                     inputMapa.value = mapa;
                     sugestoesLista.innerHTML = "";
+
+                    let imagemContainer = document.getElementById("imagemContainer");
+                    imagemContainer.innerHTML = `
+                        <div class="box__imagem__mapa">
+                            <h2 class="nomeDoMapa">${mapa}</h2>
+                            <img src="./src/assets/maps/${mapa}.png" alt="Mapa ${mapa}" class="imagem-mapa">
+                        </div>
+                    `;
                 });
                 sugestoesLista.appendChild(item);
             });
         }
     }
 
-
     inputMapa.addEventListener("input", debounce(mostrarSugestoes, 300));
-
 
     inputMapa.addEventListener("keypress", function(event) {
         if (event.key === "Enter") {
