@@ -41,19 +41,31 @@ document.getElementById("mapsID").addEventListener("click", function() {
                 item.textContent = mapa;
                 item.addEventListener("click", function() {
                     inputMapa.value = mapa;
-                    sugestoesLista.innerHTML = "";
-
-                    let imagemContainer = document.getElementById("imagemContainer");
-                    imagemContainer.innerHTML = `
-                        <div class="box__imagem__mapa">
-                            <h2 class="nomeDoMapa">${mapa}</h2>
-                            <img src="./src/assets/maps/${mapa}.png" alt="Mapa ${mapa}" class="imagem-mapa">
-                        </div>
-                    `;
+                    sugestoesLista.innerHTML = ""; // Limpa a lista após a seleção
+                    sugestoesLista.style.display = "none"; // Oculta a lista de sugestões
+                    exibirImagem(mapa);
                 });
                 sugestoesLista.appendChild(item);
             });
+            sugestoesLista.style.display = "block"; // Exibe a lista de sugestões quando há correspondências
+        } else {
+            sugestoesLista.style.display = "none"; // Oculta a lista quando não há sugestões
         }
+    }
+
+    function exibirImagem(nomeMapa) {
+        let imagemContainer = document.getElementById("imagemContainer");
+        imagemContainer.innerHTML = `
+            <div class="box__imagem__mapa">
+                <h2 class="nomeDoMapa">${nomeMapa}</h2>
+                <img src="./src/assets/maps/${nomeMapa}.png" alt="Mapa ${nomeMapa}" class="imagem-mapa" 
+                     onerror="this.onerror=null; this.src='./src/assets/maps/mapa-nao-encontrado.png'; document.getElementById('erroMensagem').style.display='block';">
+                <p id="erroMensagem" style="display: none; color: red; text-align: center;">
+                    Imagem não encontrada. Certifique-se de que o nome do mapa está correto. 
+                    Se o erro persistir, tire um print do mapa para que ele possa ser adicionado e envie para um administrador da Setai.
+                </p>
+            </div>
+        `;
     }
 
     inputMapa.addEventListener("input", debounce(mostrarSugestoes, 300));
@@ -63,15 +75,16 @@ document.getElementById("mapsID").addEventListener("click", function() {
             event.preventDefault();
             let nomeMapa = this.value.trim();
             if (nomeMapa !== "") {
-                let imagemContainer = document.getElementById("imagemContainer");
-                imagemContainer.innerHTML = `
-                    <div class="box__imagem__mapa">
-                        <h2 class="nomeDoMapa">${nomeMapa}</h2>
-                        <img src="./src/assets/maps/${nomeMapa}.png" alt="Mapa ${nomeMapa}" class="imagem-mapa">
-                    </div>
-                `;
+                exibirImagem(nomeMapa);
                 sugestoesLista.innerHTML = ""; 
+                sugestoesLista.style.display = "none"; // Oculta a lista ao pressionar Enter
             }
         }
+    });
+
+    inputMapa.addEventListener("blur", function() {
+        setTimeout(() => {
+            sugestoesLista.style.display = "none"; // Oculta a lista ao perder o foco
+        }, 200);
     });
 });
