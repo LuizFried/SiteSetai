@@ -13,7 +13,9 @@ document.getElementById("mapsID").addEventListener("click", function() {
     const listaMapas = [
         "ceritos-avulsum", "heritos-eyoztum", "xurites-ataglos", "xuros-eyoztum", "xuyitos-aioblos", "xynitos-obursum",
         "xynos-oyogam", "xouitos-aeoilos", "xoritos-osayam", "hieos-aiigaum", "quantun-et-odetum", "sasitos-oyarlum",
-        "sasitos-ugersum"
+        "sasitos-ugersum", "settun-in-nusis", "souos-umogaum", "turitos-atlatos","xasos-aeoilos","xasos-aoemaum",
+        "xasos-oneulum", "xebitos-oyogam", "xebos-emimsum", "xebos-exostum", "xerites-oxoulum", "xetitos-emimsum",
+        "xiles-aiavlum","xilitos-aoemaum","xilos-osayam","xiros-aiairom" ,"xoritos-alairom","xoritos-exosrum"
     ];
 
     const inputMapa = document.getElementById("mapa");
@@ -41,15 +43,15 @@ document.getElementById("mapsID").addEventListener("click", function() {
                 item.textContent = mapa;
                 item.addEventListener("click", function() {
                     inputMapa.value = mapa;
-                    sugestoesLista.innerHTML = ""; // Limpa a lista após a seleção
-                    sugestoesLista.style.display = "none"; // Oculta a lista de sugestões
+                    sugestoesLista.innerHTML = ""; 
+                    sugestoesLista.style.display = "none";
                     exibirImagem(mapa);
                 });
                 sugestoesLista.appendChild(item);
             });
-            sugestoesLista.style.display = "block"; // Exibe a lista de sugestões quando há correspondências
+            sugestoesLista.style.display = "block"; 
         } else {
-            sugestoesLista.style.display = "none"; // Oculta a lista quando não há sugestões
+            sugestoesLista.style.display = "none"; 
         }
     }
 
@@ -77,14 +79,14 @@ document.getElementById("mapsID").addEventListener("click", function() {
             if (nomeMapa !== "") {
                 exibirImagem(nomeMapa);
                 sugestoesLista.innerHTML = ""; 
-                sugestoesLista.style.display = "none"; // Oculta a lista ao pressionar Enter
+                sugestoesLista.style.display = "none"; 
             }
         }
     });
 
     inputMapa.addEventListener("blur", function() {
         setTimeout(() => {
-            sugestoesLista.style.display = "none"; // Oculta a lista ao perder o foco
+            sugestoesLista.style.display = "none"; 
         }, 200);
     });
 });
