@@ -195,8 +195,15 @@ i {
         justify-content: space-around;
         padding: 16px;
         margin: 16px 0;
-        overflow-x: scroll;
+        overflow-x: scroll; 
         
+        
+        scrollbar-width: none;
+        
+        
+        &::-webkit-scrollbar {
+            display: none;
+        }
     }
     
     .logo__inicial {
