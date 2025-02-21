@@ -15,7 +15,9 @@ document.getElementById("mapsID").addEventListener("click", function() {
         "xynos-oyogam", "xouitos-aeoilos", "xoritos-osayam", "hieos-aiigaum", "quantun-et-odetum", "sasitos-oyarlum",
         "sasitos-ugersum", "settun-in-nusis", "souos-umogaum", "turitos-atlatos","xasos-aeoilos","xasos-aoemaum",
         "xasos-oneulum", "xebitos-oyogam", "xebos-emimsum", "xebos-exostum", "xerites-oxoulum", "xetitos-emimsum",
-        "xiles-aiavlum","xilitos-aoemaum","xilos-osayam","xiros-aiairom" ,"xoritos-alairom","xoritos-exosrum"
+        "xiles-aiavlum","xilitos-aoemaum","xilos-osayam","xiros-aiairom" ,"xoritos-alairom","xoritos-exosrum",
+        "fynitos-egoisum", "hasitos-avaolum", "hasitos-umayaum", "hieos-avaolum", "secent-al-nutum", "xetitos-oneulum",
+         "xouos-aioblos", ""
     ];
 
     const inputMapa = document.getElementById("mapa");
