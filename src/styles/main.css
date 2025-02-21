@@ -99,7 +99,7 @@ body {
     100% { color: rgb(103, 255, 103); }
 }
 
-.strong__setai, .titulo__influencer, .titulo__staff, .titulo__uteis, .titulo__builds, .nomeDoMapa {
+.strong__setai, .titulo__influencer, .titulo__staff, .titulo__uteis, .titulo__builds, .nomeDoMapa ,.titulo__loot{
     font-weight: bold;
     animation: brasilColors 2s infinite;
 }
@@ -158,7 +158,7 @@ i {
 
 .botao__recrutamento {
     width: 100%;
-    height: 3rem;
+    height: 2rem;
     border-radius: 16px;
     background-color: gold;
     color: black;
@@ -170,10 +170,18 @@ i {
 
 .botao__recrutamento {
     width: 100%;
-    height: 100%;
+    height: 70%;
     border-radius: 16px;
     margin-bottom: 2rem;
-    margin-top: 5rem;
+    margin-top: 3rem;
+    border-radius: 16px;
+}
+
+#image__recrut {
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    
 }
 
 /* Responsividade para telas pequenas */

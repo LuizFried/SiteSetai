@@ -1,0 +1,40 @@
+.loot__tittle {
+    font-size: 1.5rem;
+    padding: 0.8rem;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    width: 100%; 
+    text-align: center; 
+}
+
+.titulo__loot {
+    text-align: center;
+}
+
+.loot__form{
+    display: flex;
+    width: 60%;
+    height: 2%;
+    flex-direction: row;
+    gap: 0.5rem;
+    padding:0.5rem;
+    color: aliceblue;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+.input__number{
+    background-color: gray;
+    border: 1px solid gold;
+    max-width: 30%;
+    max-height: 100%;
+    text-align: center;
+    padding: 0.5rem;
+
+}
+
+
+
