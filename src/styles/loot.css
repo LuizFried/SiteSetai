@@ -6,35 +6,46 @@
     align-items: center; 
     width: 100%; 
     text-align: center; 
+    font-family: "Oswald", serif;
+    font-weight: 700;
+    margin-bottom: 1rem;
 }
 
 .titulo__loot {
     text-align: center;
 }
 
-.loot__form{
+.loot__form {
     display: flex;
     width: 60%;
-    height: 2%;
     flex-direction: row;
     gap: 0.5rem;
-    padding:0.5rem;
+    padding: 0.5rem;
     color: aliceblue;
     align-items: center;
     justify-content: center;
     text-align: center;
-    
 }
 
-.input__number{
-    background-color: gray;
+.input__number {
+    background-color: transparent;
     border: 1px solid gold;
-    max-width: 30%;
-    max-height: 100%;
+    width: 80px; 
+    height: 30px; 
     text-align: center;
-    padding: 0.5rem;
+    padding: 0.2rem;
+    box-sizing: border-box;
+    font-size: 1rem;
+    text-align: center;
 
 }
 
+.input__number::-webkit-inner-spin-button, 
+.input__number::-webkit-outer-spin-button {
+    margin: 0;
+}
 
-
+.label__input {
+    font-size: 1rem;
+    padding: 0.2rem;
+}
