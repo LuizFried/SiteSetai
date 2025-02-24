@@ -28,24 +28,53 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 0.5rem;
+    gap: 0.7rem;
     padding: 1rem;
     color: rgba(255, 255, 255, 0.785);
     font-family: "Poppins", serif;
     font-weight: 700;
     font-style: normal;
+    border-radius: 1rem;
+    
+}
+
+#batzovo:hover{
+    background-image: url("/src/assets/staff/Erva_medicinal.jpg");
+    background-size: cover;         
+    background-position: center;    
+    background-repeat: no-repeat;
+    color: yellow;
+    font-size: 1rem;
+    font-weight: 1000;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0);
+    
+}
+
+#marquesbr:hover{
+    background-image: url("/src/assets/staff/machado.jpg");
+    background-color: rgba(255, 255, 255, 0.719);
+    background-size: cover;         
+    background-position: center;    
+    background-repeat: no-repeat;
+    color: yellow;
+    font-size: 1rem;
+    font-weight: 1000;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0);
+    
 }
 
 .img__influencer {
     width: 100px; 
     height: 100px;
     border-radius: 50%;
-    border: 1px solid gold;
+    border: 1px solid rgba(3, 216, 3, 0.5);
 }
 
 .span__ancora__link { 
+    display: flex;
     font-weight: 900;
-    gap: 16px;
+    gap: 0.6rem;
+    justify-content: center;
 }
 
 #twitchID {
@@ -54,6 +83,10 @@
 
 #youtubeID {
     color: #FF0000;
+}
+
+#tiktokID {
+    color: rgb(146, 146, 146);
 }
 
 /* Responsividade */
