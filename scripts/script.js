@@ -335,7 +335,7 @@ document.getElementById("staffID").addEventListener("click", function() {
         <img class="img__staff" src="./src/assets/staff/douglasmarvado.jpg" alt="Foto do staff">
         <h1 class="nome__staff">DouglasMarvado</h1>
         <p class="descricao__staff">
-            DouglasMarvado, com seu faro investigativo, patrulha os mapas em busca de criminosos... ou pelo menos de um bom PvP. Só não tente subornar, porque, diferente de Albion, na delegacia o trade é desativado.
+            DouglasMarvado, com seu faro investigativo, patrulha os mapas em busca de criminosos... ou pelo menos de um bom PvP. Só não procure por ele, porque a rua anda perigosa.
         </p>
         </div>
 
