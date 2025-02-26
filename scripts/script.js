@@ -306,35 +306,46 @@ document.getElementById("utilidadesID").addEventListener("click", function() {
 
 document.getElementById("staffID").addEventListener("click", function() {
     document.getElementById("conteudoID").innerHTML =`
-    <a href="#" onclick="location.reload(); return false;"><i class="fa-solid fa-arrow-left"></i></a>
-    <h1 class="titulo__staff">STAFF</h1>
-    <div class="box__staff">
-        <div class="staff">
-            <img class="img__staff" src="./src/assets/staff/perga.jpg" alt="Foto do staff">
-            <h1 class="nome__staff">Yperga</h1>
-            
+    <a href="#" onclick="location.reload(); return false;">
+    <i class="fa-solid fa-arrow-left"></i>
+</a>
+
+<h1 class="titulo__staff">STAFF</h1>
+
+<div class="box__staff">
+    <div class="staff">
+        <img class="img__staff" src="./src/assets/staff/perga.jpg" alt="Foto do staff">
+        <h1 class="nome__staff">Yperga</h1>
+        <p class="descricao__staff">
+            Yperga é um caller incansável e um verdadeiro revolucionário de Albion. Apesar dos ideais comunistas, ainda não conseguiu convencer os ricos da guilda a redistribuir os mamutes.
+        </p>
+    </div>
+
+    <div class="staff">
+        <img class="img__staff" src="./src/assets/staff/marialice.jpg" alt="Foto do staff">
+        <h1 class="nome__staff">Marialice</h1>
+        <p class="descricao__staff">
+            Marialice, conhecido como o "Elon Musk do Nordeste", é um visionário empreendedor 
+            apaixonado por Albion e tartarugas. No entanto, o empreendedorismo e a preservação 
+            ambiental nem sempre caminham juntos.
+        </p>
+    </div>
+
+    <div class="staff">
+        <img class="img__staff" src="./src/assets/staff/douglasmarvado.jpg" alt="Foto do staff">
+        <h1 class="nome__staff">DouglasMarvado</h1>
+        <p class="descricao__staff">
+            DouglasMarvado, com seu faro investigativo, patrulha os mapas em busca de criminosos... ou pelo menos de um bom PvP. Só não tente subornar, porque, diferente de Albion, na delegacia o trade é desativado.
+        </p>
         </div>
 
-        <div class="staff">
-            <img class="img__staff" src="./src/assets/staff/marialice.jpg" alt="Foto do staff">
-            <h1 class="nome__staff">Marialice</h1>
-            
-        </div>
-
-        <div class="staff">
-            <img class="img__staff" src="./src/assets/staff/douglasmarvado.jpg" alt="Foto do staff">
-            <h1 class="nome__staff">DouglasMarvado</h1>
-            
-        </div>
-
-        <div class="staff">
-            <img class="img__staff" src="./src/assets/staff/batzovo.jpg" alt="Foto do staff">
-            <h1 class="nome__staff">BatzOvo</h1>
-            
-        </div>
-
-
-
-        
-    </div>`;
-});
+<div class="staff">
+    <img class="img__staff" src="./src/assets/staff/batzovo.jpg" alt="Foto do staff">
+    <h1 class="nome__staff">BatzOvo</h1>
+    <p class="descricao__staff">
+        BatzOvo, conhecido como 'Menino Mogli', aprecia um bom vinho e tem uma conexão quase espiritual com a maconha. Dizem que, depois de umas tragadas, ele não luta mais—ele sente o PvP.
+    </p>
+    </div>
+</div>
+`;
+})
