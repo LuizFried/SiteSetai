@@ -343,7 +343,7 @@ document.getElementById("staffID").addEventListener("click", function() {
     <img class="img__staff" src="./src/assets/staff/batzovo.jpg" alt="Foto do staff">
     <h1 class="nome__staff">BatzOvo</h1>
     <p class="descricao__staff">
-        BatzOvo, conhecido como 'Menino Mogli', aprecia um bom vinho e tem uma conexão quase espiritual com a maconha. Dizem que, depois de umas tragadas, ele não luta mais—ele sente o PvP.
+        Conhecido como Menino-Mogli, é famoso por seu lobo, que não morde, só chupa. Apreciador de ervas naturais e de uma boa coquinha gelada.
     </p>
     </div>
 </div>
