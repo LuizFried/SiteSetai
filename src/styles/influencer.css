@@ -39,6 +39,7 @@
 }
 
 #batzovo:hover{
+    border: 0.1rem solid gold;
     background-image: url("/src/assets/staff/Erva_medicinal.jpg");
     background-size: cover;         
     background-position: center;    
@@ -51,8 +52,8 @@
 }
 
 #marquesbr:hover{
+    border: 0.1rem solid gold;
     background-image: url("/src/assets/staff/machado.jpg");
-    background-color: rgba(255, 255, 255, 0.719);
     background-size: cover;         
     background-position: center;    
     background-repeat: no-repeat;
@@ -62,6 +63,20 @@
     text-shadow: 2px 2px 4px rgba(0, 0, 0);
     
 }
+
+#setai_br:hover{
+    border: 0.1rem solid gold;
+    background-image: url("/src/assets/samurai1.jpg");
+    background-size: cover;         
+    background-position: center;    
+    background-repeat: no-repeat;
+    color: yellow;
+    font-size: 1rem;
+    font-weight: 1000;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0);
+    
+}
+
 
 .img__influencer {
     width: 100px; 

@@ -22,6 +22,15 @@ document.getElementById("influencerID").addEventListener("click", function() {
             </span>
         </div>
 
+        <div class="influencer" id="setai_br">
+            <img class="img__influencer" src="./src/assets/newico.jpg" alt="Foto do influencer">
+            <h1 class="nome__influencer">Setai_BR</h1>
+            <span class="span__ancora__link">
+                <a href="https://www.youtube.com/@SETAI_BR" target="blank"><i id="youtubeID" class="fa-brands fa-youtube"></i></a>
+            </span>
+        </div>
+
+
         
     </div>`;
 });
