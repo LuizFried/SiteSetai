@@ -39,3 +39,8 @@
     color: #388E3C;
     transform: scale(1.25);
 }
+
+.staff:hover{
+    transform: scale(1.05);
+    border: 0.1rem solid;
+}
