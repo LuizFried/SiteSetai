@@ -304,48 +304,120 @@ document.getElementById("utilidadesID").addEventListener("click", function() {
 /*STAFF*/
 
 
-document.getElementById("staffID").addEventListener("click", function() {
-    document.getElementById("conteudoID").innerHTML =`
-    <a href="#" onclick="location.reload(); return false;">
-    <i class="fa-solid fa-arrow-left"></i>
-</a>
+    document.getElementById("staffID").addEventListener("click", function() {
+        document.getElementById("conteudoID").innerHTML = `
+        <a href="#" onclick="location.reload(); return false;">
+            <i class="fa-solid fa-arrow-left"></i>
+        </a>
 
-<h1 class="titulo__staff">STAFF</h1>
+        <h1 class="titulo__staff">STAFF</h1>
 
-<div class="box__staff">
-    <div class="staff">
-        <img class="img__staff" src="./src/assets/staff/perga.jpg" alt="Foto do staff">
-        <h1 class="nome__staff">Yperga</h1>
-        <p class="descricao__staff">
-            Yperga é um caller incansável e um verdadeiro revolucionário de Albion. Apesar dos ideais comunistas, ainda não conseguiu convencer os ricos da guilda a redistribuir os mamutes.
-        </p>
-    </div>
+        <div class="box__staff">
+            <div class="staff" id="YpergaID">
+                <img class="img__staff" src="./src/assets/staff/perga.jpg" alt="Foto do staff">
+                <h1 class="nome__staff">Yperga</h1>
+                <p class="descricao__staff">
+                    Yperga é um caller incansável e um verdadeiro revolucionário de Albion. Apesar dos ideais comunistas, ainda não conseguiu convencer os ricos da guilda a redistribuir os mamutes.
+                </p>
+            </div>
 
-    <div class="staff">
-        <img class="img__staff" src="./src/assets/staff/marialice.jpg" alt="Foto do staff">
-        <h1 class="nome__staff">Marialice</h1>
-        <p class="descricao__staff">
-            Marialice, conhecido como o "Elon Musk do Nordeste", é um visionário empreendedor 
-            apaixonado por Albion e tartarugas. No entanto, o empreendedorismo e a preservação 
-            ambiental nem sempre caminham juntos.
-        </p>
-    </div>
+            <div class="staff" id="MariaID">
+                <img class="img__staff" src="./src/assets/staff/marialice.jpg" alt="Foto do staff">
+                <h1 class="nome__staff">Marialice</h1>
+                <p class="descricao__staff">
+                    Marialice, conhecido como o "Elon Musk do Nordeste", é um visionário empreendedor 
+                    apaixonado por Albion e tartarugas. No entanto, o empreendedorismo e a preservação 
+                    ambiental nem sempre caminham juntos.
+                </p>
+            </div>
 
-    <div class="staff">
-        <img class="img__staff" src="./src/assets/staff/douglasmarvado.jpg" alt="Foto do staff">
-        <h1 class="nome__staff">DouglasMarvado</h1>
-        <p class="descricao__staff">
-            DouglasMarvado, com seu faro investigativo, patrulha os mapas em busca de criminosos... ou pelo menos de um bom PvP. Só não procure por ele, porque a rua anda perigosa.
-        </p>
+            <div class="staff" id="DouglasID">
+                <img class="img__staff" src="./src/assets/staff/douglasmarvado.jpg" alt="Foto do staff">
+                <h1 class="nome__staff">DouglasMarvado</h1>
+                <p class="descricao__staff">
+                    DouglasMarvado, com seu faro investigativo, patrulha os mapas em busca de criminosos... ou pelo menos de um bom PvP. Só não procure por ele, porque a rua anda perigosa.
+                </p>
+            </div>
+
+            <div class="staff" id="BatzID">
+                <img class="img__staff" src="./src/assets/staff/batzovo.jpg" alt="Foto do staff">
+                <h1 class="nome__staff">BatzOvo</h1>
+                <p class="descricao__staff">
+                    Conhecido como Menino-Mogli, é famoso por seu lobo, que não morde, só chupa. Apreciador de ervas naturais e de uma boa coquinha gelada.
+                </p>
+            </div>
         </div>
 
-<div class="staff">
-    <img class="img__staff" src="./src/assets/staff/batzovo.jpg" alt="Foto do staff">
-    <h1 class="nome__staff">BatzOvo</h1>
-    <p class="descricao__staff">
-        Conhecido como Menino-Mogli, é famoso por seu lobo, que não morde, só chupa. Apreciador de ervas naturais e de uma boa coquinha gelada.
-    </p>
-    </div>
-</div>
-`;
-})
+        <audio id="audioYperga" src="./src/assets/audios/yperga.mp3" preload="auto"></audio>
+        <audio id="audioMaria" src="./src/assets/audios/maria.mp3" preload="auto"></audio>
+        <audio id="audioDouglas" src="./src/assets/audios/douglas.mp3" preload="auto"></audio>
+        <audio id="audioBatz" src="./src/assets/audios/batz.mp3" preload="auto"></audio>
+
+        `;
+
+        const ypergaElement = document.getElementById("YpergaID");
+        const audioY = document.getElementById("audioYperga");
+        audioY.volume = 0.01;
+        audioY.load();
+
+        ypergaElement.addEventListener("mouseenter", () => {
+            audioY.currentTime = 2;
+            audioY.play();
+        });
+
+        ypergaElement.addEventListener("mouseleave", () => {
+            audioY.pause();
+            audioY.currentTime = 2;
+        });
+
+                 //
+
+        const mariaElement = document.getElementById("MariaID");
+        const audioM = document.getElementById("audioMaria");
+        audioM.volume = 0.01;
+        audioM.load();
+
+        mariaElement.addEventListener("mouseenter", () => {
+            audioM.currentTime = 18;
+            audioM.play();
+        });
+
+        mariaElement.addEventListener("mouseleave", () => {
+            audioM.pause();
+            audioM.currentTime = 18;
+        });
+
+        //
+
+        const douglasElement = document.getElementById("DouglasID");
+        const audioD = document.getElementById("audioDouglas");
+        audioD.volume = 0.01;
+        audioD.load();
+
+        douglasElement.addEventListener("mouseenter", () => {
+            audioD.currentTime = 0;
+            audioD.play();
+        });
+
+        douglasElement.addEventListener("mouseleave", () => {
+            audioD.pause();
+            audioD.currentTime = 0;
+        });
+
+        //
+
+        const batzElement = document.getElementById("BatzID");
+        const audioB = document.getElementById("audioBatz");
+        audioB.volume = 0.03;
+        audioB.load();
+
+        batzElement.addEventListener("mouseenter", () => {
+            audioB.currentTime = 0;
+            audioB.play();
+        });
+
+        batzElement.addEventListener("mouseleave", () => {
+            audioB.pause();
+            audioB.currentTime = 0;
+        });
+    });
