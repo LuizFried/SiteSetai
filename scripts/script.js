@@ -108,7 +108,9 @@ document.getElementById("mapsID").addEventListener("click", function() {
         "xasos-oneulum", "xebitos-oyogam", "xebos-emimsum", "xebos-exostum", "xerites-oxoulum", "xetitos-emimsum",
         "xiles-aiavlum","xilitos-aoemaum","xilos-osayam","xiros-aiairom" ,"xoritos-alairom","xoritos-exosrum",
         "fynitos-egoisum", "hasitos-avaolum", "hasitos-umayaum", "hieos-avaolum", "secent-al-nutum", "xetitos-oneulum",
-         "xouos-aioblos", ""
+         "xouos-aioblos", "fieos-aiuttum", "firos-aiavam", "firos-ezatam", "firos-osinsum", "fonitos-amaurom",
+          "fonos-oleraum", "foritos-aiaylos", "foros-egoisum", "fouitos-aiuttum", "fouos-agosaum", "fouos-amaurom",
+           "furitos-aiavam", "fuyitos-ayiotum", "fynes-unavtum", "", "", "", "", ""
     ];
 
     const inputMapa = document.getElementById("mapa");
