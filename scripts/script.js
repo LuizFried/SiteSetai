@@ -345,7 +345,7 @@ document.getElementById("utilidadesID").addEventListener("click", function() {
                 <img class="img__staff" src="./src/assets/staff/batzovo.jpg" alt="Foto do staff">
                 <h1 class="nome__staff">BatzOvo</h1>
                 <p class="descricao__staff">
-                    Conhecido como Menino-Mogli, é famoso por seu lobo, que não morde, só chupa. Apreciador de ervas naturais e de uma boa coquinha gelada.
+                    Conhecido como Menino-Mogli, é famoso por seu lobo, Chupa-Chupa. Apreciador de ervas naturais e de uma boa coquinha gelada.
                 </p>
             </div>
         </div>
@@ -359,7 +359,7 @@ document.getElementById("utilidadesID").addEventListener("click", function() {
 
         const ypergaElement = document.getElementById("YpergaID");
         const audioY = document.getElementById("audioYperga");
-        audioY.volume = 0.01;
+        audioY.volume = 0.02;
         audioY.load();
 
         ypergaElement.addEventListener("mouseenter", () => {
@@ -376,7 +376,7 @@ document.getElementById("utilidadesID").addEventListener("click", function() {
 
         const mariaElement = document.getElementById("MariaID");
         const audioM = document.getElementById("audioMaria");
-        audioM.volume = 0.01;
+        audioM.volume = 0.02;
         audioM.load();
 
         mariaElement.addEventListener("mouseenter", () => {
@@ -393,7 +393,7 @@ document.getElementById("utilidadesID").addEventListener("click", function() {
 
         const douglasElement = document.getElementById("DouglasID");
         const audioD = document.getElementById("audioDouglas");
-        audioD.volume = 0.01;
+        audioD.volume = 0.02;
         audioD.load();
 
         douglasElement.addEventListener("mouseenter", () => {
@@ -410,7 +410,7 @@ document.getElementById("utilidadesID").addEventListener("click", function() {
 
         const batzElement = document.getElementById("BatzID");
         const audioB = document.getElementById("audioBatz");
-        audioB.volume = 0.03;
+        audioB.volume = 0.04;
         audioB.load();
 
         batzElement.addEventListener("mouseenter", () => {

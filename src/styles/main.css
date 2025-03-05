@@ -444,6 +444,10 @@ i {
     background-color: #f0f0f0;
 }
 
+.sugestoes-lista:empty {
+    display: none;
+}
+
 /* Estilos para imagem */
 .imagemContainer {
     display: flex;
