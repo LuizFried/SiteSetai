@@ -89,102 +89,152 @@ document.getElementById("buildsID").addEventListener("click", function () {
 /*MAPS*/
 
 
-document.getElementById("mapsID").addEventListener("click", function() {
+document.getElementById("mapsID").addEventListener("click", function () {
     document.getElementById("conteudoID").innerHTML = `
         <a href="#" onclick="location.reload(); return false;">
-            <i class="fa-solid fa-arrow-left"></i>
-        </a>
-        <div class="box__input__mapa">
-            <input type="text" id="mapa" class="mapa" placeholder="Digite o nome do mapa">
-            <ul id="sugestoes" class="sugestoes-lista"></ul>
+        <i class="fa-solid fa-arrow-left"></i>
+    </a>
+        <div class="maps-input-container">
+            <input type="text" id="mapa" class="maps-input" placeholder="Digite o nome do mapa">
+            <ul id="sugestoes" class="maps-suggestions-list"></ul>
         </div>
-        <div id="imagemContainer"></div>
+        <div id="imagemContainer" class="maps-image-container"></div>
     `;
 
-    const listaMapas = [
-        "ceritos-avulsum", "heritos-eyoztum", "xurites-ataglos", "xuros-eyoztum", "xuyitos-aioblos", "xynitos-obursum",
-        "xynos-oyogam", "xouitos-aeoilos", "xoritos-osayam", "hieos-aiigaum", "quantun-et-odetum", "sasitos-oyarlum",
-        "sasitos-ugersum", "settun-in-nusis", "souos-umogaum", "turitos-atlatos","xasos-aeoilos","xasos-aoemaum",
-        "xasos-oneulum", "xebitos-oyogam", "xebos-emimsum", "xebos-exostum", "xerites-oxoulum", "xetitos-emimsum",
-        "xiles-aiavlum","xilitos-aoemaum","xilos-osayam","xiros-aiairom" ,"xoritos-alairom","xoritos-exosrum",
-        "fynitos-egoisum", "hasitos-avaolum", "hasitos-umayaum", "hieos-avaolum", "secent-al-nutum", "xetitos-oneulum",
-         "xouos-aioblos", "fieos-aiuttum", "firos-aiavam", "firos-ezatam", "firos-osinsum", "fonitos-amaurom",
-          "fonos-oleraum", "foritos-aiaylos", "foros-egoisum", "fouitos-aiuttum", "fouos-agosaum", "fouos-amaurom",
-           "furitos-aiavam", "fuyitos-ayiotum", "fynes-unavtum", "", "", "", "", ""
-    ];
+    // Função para carregar e ler a planilha
+    function carregarPlanilha() {
+        console.log("Tentando carregar a planilha...");
 
-    const inputMapa = document.getElementById("mapa");
-    const sugestoesLista = document.getElementById("sugestoes");
+        fetch("./src/assets/Avalon.xlsx")
+            .then(response => {
+                if (!response.ok) throw new Error("Erro ao carregar o arquivo!");
+                return response.arrayBuffer();
+            })
+            .then(buffer => {
+                console.log("Arquivo carregado com sucesso!");
 
-    function debounce(func, delay) {
-        let timeout;
-        return function (...args) {
-            clearTimeout(timeout);
-            timeout = setTimeout(() => func.apply(this, args), delay);
-        };
+                const workbook = XLSX.read(buffer, { type: "array" });
+                const sheetName = workbook.SheetNames[0];
+                console.log("Planilha detectada:", sheetName);
+
+                const worksheet = workbook.Sheets[sheetName];
+                if (!worksheet) {
+                    console.error("A planilha não contém dados.");
+                    return;
+                }
+
+                const jsonData = XLSX.utils.sheet_to_json(worksheet);
+
+                console.log("Dados convertidos:", jsonData);
+
+                exibirListaMapas(jsonData);
+            })
+            .catch(error => console.error("Erro:", error));
     }
 
-    function mostrarSugestoes() {
-        let termo = inputMapa.value.toLowerCase().trim();
-        sugestoesLista.innerHTML = ""; 
+    function exibirListaMapas(mapas) {
+        const inputMapa = document.getElementById("mapa");
+        const sugestoesLista = document.getElementById("sugestoes");
 
-        if (termo.length > 0) {
-            let sugestoesFiltradas = listaMapas
-                .filter(mapa => mapa.toLowerCase().includes(termo)) 
-                .slice(0, 10); 
-
-            sugestoesFiltradas.forEach(mapa => {
-                let item = document.createElement("li");
-                item.textContent = mapa;
-                item.addEventListener("click", function() {
-                    inputMapa.value = mapa;
-                    sugestoesLista.innerHTML = ""; 
-                    sugestoesLista.style.display = "none";
-                    exibirImagem(mapa);
-                });
-                sugestoesLista.appendChild(item);
-            });
-            sugestoesLista.style.display = "block"; 
-        } else {
-            sugestoesLista.style.display = "none"; 
+        function debounce(func, delay) {
+            let timeout;
+            return function (...args) {
+                clearTimeout(timeout);
+                timeout = setTimeout(() => func.apply(this, args), delay);
+            };
         }
-    }
 
-    function exibirImagem(nomeMapa) {
-        let imagemContainer = document.getElementById("imagemContainer");
-        imagemContainer.innerHTML = `
-            <div class="box__imagem__mapa">
-                <h2 class="nomeDoMapa">${nomeMapa}</h2>
-                <img src="./src/assets/maps/${nomeMapa}.png" alt="Mapa ${nomeMapa}" class="imagem-mapa" 
-                     onerror="this.onerror=null; this.src='./src/assets/maps/mapa-nao-encontrado.png'; document.getElementById('erroMensagem').style.display='block';">
-                <p id="erroMensagem" style="display: none; color: red; text-align: center;">
-                    Imagem não encontrada. Certifique-se de que o nome do mapa está correto. 
-                    Se o erro persistir, tire um print do mapa para que ele possa ser adicionado e envie para um administrador da Setai.
-                </p>
-            </div>
-        `;
-    }
+        function mostrarSugestoes() {
+            let termo = inputMapa.value.toLowerCase().trim();
+            sugestoesLista.innerHTML = "";
 
-    inputMapa.addEventListener("input", debounce(mostrarSugestoes, 300));
+            if (termo.length > 0) {
+                let sugestoesFiltradas = mapas
+                    .filter(mapa => mapa.Name.toLowerCase().includes(termo))
+                    .slice(0, 10);
 
-    inputMapa.addEventListener("keypress", function(event) {
-        if (event.key === "Enter") {
-            event.preventDefault();
-            let nomeMapa = this.value.trim();
-            if (nomeMapa !== "") {
-                exibirImagem(nomeMapa);
-                sugestoesLista.innerHTML = ""; 
-                sugestoesLista.style.display = "none"; 
+                sugestoesFiltradas.forEach(mapa => {
+                    let item = document.createElement("li");
+                    item.textContent = mapa.Name;
+                    item.addEventListener("click", function () {
+                        inputMapa.value = mapa.Name;
+                        sugestoesLista.innerHTML = "";
+                        sugestoesLista.style.display = "none";
+                        exibirImagem(mapa);
+                    });
+                    sugestoesLista.appendChild(item);
+                });
+
+                sugestoesLista.style.display = "block";
+            } else {
+                sugestoesLista.style.display = "none";
             }
         }
-    });
 
-    inputMapa.addEventListener("blur", function() {
-        setTimeout(() => {
-            sugestoesLista.style.display = "none"; 
-        }, 200);
-    });
+        function exibirImagem(mapa) {
+            let imagemContainer = document.getElementById("imagemContainer");
+
+            // Mapear os valores dos campos para as imagens correspondentes
+            const imagemTier = `./src/assets/maps/tier.png`;
+            const imagemBlue = `./src/assets/maps/bauazul.png`;
+            const imagemGold = `./src/assets/maps/baudourado.png`;
+            const imagemGreen = `./src/assets/maps/bauverde.png`;
+
+            imagemContainer.innerHTML = `
+                <div class="maps-image-box">
+                    <h2 class="maps-image-title">${mapa.Name}</h2>
+                    <div class="maps-image-tier">
+                        <img src="${imagemTier}" alt="Tier ${mapa.Tier}" />
+                        <p>${mapa.Tier}</p>
+                    </div>
+                    <div class="maps-image-blue">
+                        <img src="${imagemBlue}" alt="Blue" />
+                        <p>${mapa.BLUE}</p>
+                    </div>
+                    <div class="maps-image-gold">
+                        <img src="${imagemGold}" alt="Gold" />
+                        <p>${mapa.GOLD}</p>
+                    </div>
+                    <div class="maps-image-green">
+                        <img src="${imagemGreen}" alt="Green" />
+                        <p>${mapa.GREEN}</p>
+                    </div>
+                </div>
+            `;
+        }
+
+        inputMapa.addEventListener("input", debounce(mostrarSugestoes, 300));
+
+        inputMapa.addEventListener("keypress", function (event) {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                let nomeMapa = this.value.trim();
+                if (nomeMapa !== "") {
+                    const mapaSelecionado = mapas.find(mapa => mapa.Name.toLowerCase() === nomeMapa.toLowerCase());
+                    if (mapaSelecionado) {
+                        exibirImagem(mapaSelecionado);
+                        sugestoesLista.innerHTML = "";
+                        sugestoesLista.style.display = "none";
+                    } else {
+                        let imagemContainer = document.getElementById("imagemContainer");
+                        imagemContainer.innerHTML = `
+                            <p class="maps-error-message" style="color: red; text-align: center;">Mapa não encontrado. Por favor, verifique o nome.</p>
+                        `;
+                    }
+                }
+            }
+        });
+
+        inputMapa.addEventListener("blur", function () {
+            setTimeout(() => {
+                sugestoesLista.style.display = "none";
+            }, 200);
+        });
+    }
+
+    carregarPlanilha(); // Carrega a planilha quando a página é carregada
 });
+
 
 
 

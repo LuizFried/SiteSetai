@@ -377,114 +377,159 @@ i {
 
 
 /* MAPS */
-
-.box__input__mapa {
+/* ------------------------------------------------
+    ESTILOS PARA O INPUT
+--------------------------------------------------- */
+.maps-input-container {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
     gap: 0.5rem;
     padding: 1rem;
     width: 100%;
     max-width: 100%;
-    height: 50%;
-    max-height: 10%;
-    position: relative; 
+    position: relative; /* Garante que os elementos internos usem ele como referência */
     box-sizing: border-box;
 }
 
-.mapa {
+.maps-input {
     width: 100%;
-    max-width: 300px; 
-    height: 35px; 
-    border: 2px solid rgb(207, 198, 198);
+    max-width: 300px;
+    height: 35px;
+    border: 2px solid rgb(50, 50, 50); /* Tom escuro para o contorno */
     border-radius: 1rem;
     font-family: "Oswald", serif;
     font-weight: 700;
     text-align: center;
-    background-color: rgba(209, 196, 196, 0.8);
-    color: black;
+    background-color: rgb(15, 15, 15); /* Preto bem escuro */
+    color: rgb(180, 180, 180); /* Contraste sem ser muito claro */
     padding: 0.5rem;
-    font-size: 14px; 
+    font-size: 14px;
     box-sizing: border-box;
 }
 
-.sugestoes-lista {
+/* ------------------------------------------------
+    ESTILOS PARA A LISTA DE SUGESTÕES
+--------------------------------------------------- */
+.maps-suggestions-list {
     list-style-type: none;
     padding: 0.2rem;
     margin: 0;
     width: 100%;
-    max-width: 17rem;
+    max-width: 300px;
     height: auto;
-    max-height: 5rem;  
-    background-color: #a5a5a5;
-    border: 1px solid #ccc;
+    max-height: 5rem;
+    background-color: rgb(30, 30, 30); /* Diferente do input para destacar */
+    border: 1px solid rgb(50, 50, 50);
     border-radius: 0.3rem;
     box-sizing: border-box;
-    overflow-y: auto; 
+    overflow-y: auto;
     position: absolute;
-    top: 100%; 
-    left: 50%; 
-    transform: translateX(-50%); 
+    top: 100%; /* Agora fica logo abaixo do input */
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 10;
-    text-align: center; 
+    text-align: center;
 }
 
-.sugestoes-lista li {
-    padding: 0.1rem; 
+.maps-suggestions-list li {
+    padding: 0.1rem;
     cursor: pointer;
-    border-bottom: 1px solid #ddd;
-    font-size: 1.1rem; 
+    border-bottom: 1px solid rgb(70, 70, 70);
+    font-size: 1.1rem;
     font-family: var(--font-primaria);
-    font-optical-sizing: auto;
     font-weight: 700;
+    color: rgb(200, 200, 200);
 }
 
-.sugestoes-lista li:hover {
-    background-color: #f0f0f0;
+.maps-suggestions-list li:hover {
+    background-color: rgb(50, 50, 50);
 }
 
-.sugestoes-lista:empty {
-    display: none;
-}
-
-/* Estilos para imagem */
-.imagemContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
+/* ------------------------------------------------
+    ESTILOS PARA O CAMPO DE DADOS GERADOS
+--------------------------------------------------- */
+.maps-image-container {
     width: 100%;
-    max-width: 80%;
-}
-
-.box__imagem__mapa {
+    max-width: 300px;
+    position: absolute;
+    top: 11rem;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 0.5rem;
-    padding: 1rem;
-    width: 100%;
-    max-width: 100%;
-    text-align: center;
+    align-items: center;
     box-sizing: border-box;
+    background-color: transparent;
+    padding: 0.5rem;
+    border: solid 0.2rem rgb(255, 255, 255);
+    gap: 0.5rem; /* Reduz o gap entre os itens */
 }
 
-.nomeDoMapa {
-    text-transform: uppercase;
-    font-size: 1.2rem;
-    font-weight: bold;
+.maps-image-box {
+    background-color: transparent;
+    border: none;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem; /* Ajuste o espaçamento entre as imagens e o texto */
 }
 
-.imagem-mapa {
-    display: block;
-    margin: 0.5rem auto;
-    max-width: 70%;
-    height: auto;
-    max-height: 50%; 
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    border: gold 2px solid;
+.maps-image-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: rgb(0, 255, 0);
+    margin-bottom: 1rem;
+}
+
+.maps-image-tier,
+.maps-image-blue,
+.maps-image-gold,
+.maps-image-green {
+    font-size: 1.1rem;
+    color: rgb(0, 255, 0);
+    display: flex;
+    align-items: center;
+    gap: 0.3rem; /* Reduz o espaçamento entre a imagem e o texto */
+}
+
+.maps-image-tier img,
+.maps-image-blue img,
+.maps-image-gold img,
+.maps-image-green img {
+    width: 30px; /* Define um tamanho fixo para as imagens */
+    height: 30px;
+}
+
+.maps-image-tier p,
+.maps-image-blue p,
+.maps-image-gold p,
+.maps-image-green p {
+    margin: 0; /* Remove a margem extra do texto */
+    font-size: 1rem;
+    color: rgb(180, 180, 180);
+}
+
+/* ------------------------------------------------
+    ESTILOS PARA MENSAGEM DE ERRO
+--------------------------------------------------- */
+.maps-error-message {
+    font-size: 1.1rem;
+    color: red;
+    margin-top: 1rem;
+}
+
+/* ------------------------------------------------
+    ESTILOS PARA O BOTÃO DE VOLTAR
+--------------------------------------------------- */
+.maps-back-button {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: black;
+    display: inline-block;
+    margin-bottom: 1rem;
 }
 
 
